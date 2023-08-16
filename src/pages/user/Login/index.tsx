@@ -2,12 +2,12 @@ import Footer from '@/components/Footer';
 import { login } from '@/services/ant-design-pro/api';
 import { getFakeCaptcha } from '@/services/ant-design-pro/login';
 import {
-  AlipayCircleOutlined,
+  // AlipayCircleOutlined,
   LockOutlined,
   MobileOutlined,
-  TaobaoCircleOutlined,
+  // TaobaoCircleOutlined,
   UserOutlined,
-  WeiboCircleOutlined,
+  // WeiboCircleOutlined,
 } from '@ant-design/icons';
 import {
   LoginForm,
@@ -15,6 +15,7 @@ import {
   ProFormCheckbox,
   ProFormText,
 } from '@ant-design/pro-components';
+import { SYSTEM_LOGO } from '@/constants';
 import { Alert, message, Tabs } from 'antd';
 import React, { useState } from 'react';
 import { history, useModel } from 'umi';
@@ -77,18 +78,18 @@ const Login: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.content}>
         <LoginForm
-          logo={<img alt="logo" src="/logo.svg" />}
-          title="Ant Design"
+          logo={<img alt="logo" src={SYSTEM_LOGO} />}
+          title="CXY的用户中心"
           subTitle={'Ant Design 是西湖区最具影响力的 Web 设计规范'}
           initialValues={{
             autoLogin: true,
           }}
-          actions={[
-            '其他登录方式 :',
-            <AlipayCircleOutlined key="AlipayCircleOutlined" className={styles.icon} />,
-            <TaobaoCircleOutlined key="TaobaoCircleOutlined" className={styles.icon} />,
-            <WeiboCircleOutlined key="WeiboCircleOutlined" className={styles.icon} />,
-          ]}
+          // actions={[
+          //   '其他登录方式 :',
+          //   <AlipayCircleOutlined key="AlipayCircleOutlined" className={styles.icon} />,
+          //   <TaobaoCircleOutlined key="TaobaoCircleOutlined" className={styles.icon} />,
+          //   <WeiboCircleOutlined key="WeiboCircleOutlined" className={styles.icon} />,
+          // ]}
           onFinish={async (values) => {
             await handleSubmit(values as API.LoginParams);
           }}
