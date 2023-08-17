@@ -1,5 +1,6 @@
 import { GithubOutlined } from '@ant-design/icons';
 import { DefaultFooter } from '@ant-design/pro-components';
+import { AUTHOR_GITHUB } from '@/constants';
 const Footer: React.FC = () => {
   const defaultMessage = 'CXY出品';
   const currentYear = new Date().getFullYear();
@@ -20,15 +21,15 @@ const Footer: React.FC = () => {
               <GithubOutlined /> CXY的github
             </>
           ),
-          href: 'https://github.com/cabbage-xy',
+          href: AUTHOR_GITHUB,
           blankTarget: true,
         },
-        {
-          key: 'Ant Design',
-          title: 'Ant Design',
-          href: 'https://www.baidu.com',
-          blankTarget: true, //用户点击后是否在新页面跳转
-        },
+        // {
+        //   key: 'Ant Design',
+        //   title: 'Ant Design',
+        //   href: 'https://www.baidu.com',
+        //   blankTarget: true, //用户点击后是否在新页面跳转
+        // },
       ]}
     />
   );
