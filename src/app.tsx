@@ -105,3 +105,10 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
     ...initialState?.settings,
   };
 };
+
+import { RequestConfig } from 'umi';
+
+export const request: RequestConfig = {
+  timeout: 1000,
+  prefix: '/api',
+};
