@@ -13,7 +13,17 @@ export default [
     path: '/admin',
     icon: 'crown',
     access: 'canAdmin',
+    component: './Admin',
+    menu: {
+      name: '管理页面',
+    },
     routes: [
+      {
+        path: '/admin/user-manager',
+        name: '用户管理',
+        icon: 'smile',
+        component: './Admin/UserManager',
+      },
       { path: '/admin/sub-page', icon: 'smile', component: './Welcome' },
       { component: './404' },
     ],

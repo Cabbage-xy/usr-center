@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Request, Response } from 'express';
 import moment from 'moment';
 import { parse } from 'url';
@@ -80,10 +81,7 @@ function getRule(req: Request, res: Response, u: string) {
           if (!filter[key]) {
             return true;
           }
-          if (filter[key].includes(`${item[key]}`)) {
-            return true;
-          }
-          return false;
+          return filter[key].includes(`${item[key]}`);
         });
       });
     }
